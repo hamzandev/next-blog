@@ -47,7 +47,7 @@ export default function DetailPost() {
     },
   ];
   return (
-    <Layout pageTitle={"Detail Post"}>
+    <Layout pageTitle={"Detail"}>
       <div className="container mx-auto lg:pt-20 pt-10">
         <div className="flex lg:flex-row flex-col lg:my-10 my-20 gap-5">
           <div className="content lg:w-8/12 lg:px-0 px-5">
