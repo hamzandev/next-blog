@@ -42,7 +42,7 @@ export default function FeaturedPost() {
           href={"/posts/103"}
           className="px-6 py-3 rounded-md bg-gradient-to-r from-primary to-secondary"
         >
-          Read More
+          <a>Read More</a>
         </Link>
       </div>
     </div>

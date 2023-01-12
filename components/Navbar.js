@@ -29,7 +29,9 @@ export default function Navbar() {
         <div className="flex lg:flex-row flex-col justify-between items-center">
           <div className="img-logo lg:w-2/12 w-full lg:p-0 pl-2 pr-5 flex justify-between items-center">
             <Link href={"/"}>
-              <Image src={fullLogo} alt="logo" />
+              <a>
+                <Image src={fullLogo} alt="logo" />
+              </a>
             </Link>
             <button className="lg:hidden block" onClick={() => setShow(!show)}>
               <Image src={!show ? humberger : close} alt="humberger-menu" />
@@ -41,7 +43,7 @@ export default function Navbar() {
           >
             {menus.map((menu) => (
               <NavMenuLink key={menu.title} href={menu.href}>
-                {menu.title}
+                <a>{menu.title}</a>
               </NavMenuLink>
             ))}
           </ul>
@@ -50,7 +52,7 @@ export default function Navbar() {
           >
             {socials.map((social) => (
               <SocialLink key={social.title} href={social.href}>
-                {social.title}
+                <a>{social.title}</a>
               </SocialLink>
             ))}
           </ul>
@@ -59,9 +61,11 @@ export default function Navbar() {
           >
             <li>
               <Link href={"/auth/signup"}>
-                <button className="px-5 py-2 hover:from-primary/80 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
-                  Sign Up
-                </button>
+                <a>
+                  <button className="px-5 py-2 hover:from-primary/80 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
+                    Sign Up
+                  </button>
+                </a>
               </Link>
             </li>
           </ul>
@@ -75,7 +79,7 @@ export default function Navbar() {
           >
             {menus.map((menu) => (
               <NavMenuLink key={menu.title} href={menu.href}>
-                {menu.title}
+                <a>{menu.title}</a>
               </NavMenuLink>
             ))}
           </ul>
@@ -86,7 +90,7 @@ export default function Navbar() {
           >
             {socials.map((social) => (
               <SocialLink key={social.title} href={social.href}>
-                {social.title}
+                <a>{social.title}</a>
               </SocialLink>
             ))}
           </ul>
@@ -97,9 +101,11 @@ export default function Navbar() {
           >
             <li>
               <Link href={"/auth/signup"}>
-                <button className="px-5 py-2 hover:from-primary/80 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
-                  Sign Up
-                </button>
+                <a>
+                  <button className="px-5 py-2 hover:from-primary/80 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
+                    Sign Up
+                  </button>
+                </a>
               </Link>
             </li>
           </ul>
