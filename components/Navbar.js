@@ -58,7 +58,7 @@ export default function Navbar() {
             className={` lg:w-1/12 w-full lg:flex hidden lg:justify-end lg:p-0 px-5`}
           >
             <li>
-              <Link href={"/"}>
+              <Link href={"/auth/signup"}>
                 <button className="px-5 py-2 hover:from-primary/80 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
                   Sign Up
                 </button>
@@ -96,7 +96,7 @@ export default function Navbar() {
             } lg:w-1/12 w-full flex lg:justify-end lg:p-0 px-5`}
           >
             <li>
-              <Link href={"/"}>
+              <Link href={"/auth/signup"}>
                 <button className="px-5 py-2 hover:from-primary/80 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
                   Sign Up
                 </button>

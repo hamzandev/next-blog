@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import avatar from "../public/assets/shigaraki.png";
-import satu from "../public/img/1.jpg";
+import satu from "../public/img/4.jpg";
 
 export default function FeaturedPost() {
   return (

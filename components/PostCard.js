@@ -14,7 +14,7 @@ export default function PostCard({ post }) {
       <div className="image rounded-md overflow-clip">
         <Image src={post.thumbnail} alt="dua" className="w-full object-cover" />
       </div>
-      <DetailPostCard user={post?.user} post={post} />
+      <DetailPostCard user={post.user} post={post} />
     </div>
   );
 }
