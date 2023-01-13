@@ -7,7 +7,7 @@ export default function FormGroup({ type = "text", ...props }) {
       <input
         type={type}
         {...props}
-        className="focus:outline-none focus:border-primary border-b-2 border-gray-300 py-2"
+        className="focus:outline-none w-full focus:border-primary border-b-2 border-gray-300 py-2"
       />
     </div>
   );
