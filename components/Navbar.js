@@ -11,9 +11,9 @@ import close from "../public/assets/close.svg";
 
 export default function Navbar() {
   const menus = [
-    { title: "UI Design", href: "/posts?category=uidesign" },
-    { title: "Web Programming", href: "/posts?category=webprogramming" },
-    { title: "Android Dev", href: "/posts?category=androiddev" },
+    { title: "UI Design", href: "/posts?category=ui-design" },
+    { title: "Web Programming", href: "/posts?category=web-programming" },
+    { title: "Android Dev", href: "/posts?category=android-dev" },
     { title: "Framework", href: "/posts?category=framework" },
   ];
   const socials = [
@@ -29,9 +29,7 @@ export default function Navbar() {
         <div className="flex lg:flex-row flex-col justify-between items-center">
           <div className="img-logo lg:w-2/12 w-full lg:p-0 pl-2 pr-5 flex justify-between items-center">
             <Link href={"/"}>
-              <a>
-                <Image src={fullLogo} alt="logo" />
-              </a>
+              <Image src={fullLogo} alt="logo" />
             </Link>
             <button className="lg:hidden block" onClick={() => setShow(!show)}>
               <Image src={!show ? humberger : close} alt="humberger-menu" />
@@ -43,7 +41,7 @@ export default function Navbar() {
           >
             {menus.map((menu) => (
               <NavMenuLink key={menu.title} href={menu.href}>
-                <a>{menu.title}</a>
+                {menu.title}
               </NavMenuLink>
             ))}
           </ul>
@@ -52,7 +50,7 @@ export default function Navbar() {
           >
             {socials.map((social) => (
               <SocialLink key={social.title} href={social.href}>
-                <a>{social.title}</a>
+                {social.title}
               </SocialLink>
             ))}
           </ul>
@@ -61,11 +59,9 @@ export default function Navbar() {
           >
             <li>
               <Link href={"/auth/signup"}>
-                <a>
-                  <button className="px-5 py-2 hover:from-primary/80 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
-                    Sign Up
-                  </button>
-                </a>
+                <button className="px-5 py-2 hover:from-primary/80 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
+                  Sign Up
+                </button>
               </Link>
             </li>
           </ul>
@@ -79,7 +75,7 @@ export default function Navbar() {
           >
             {menus.map((menu) => (
               <NavMenuLink key={menu.title} href={menu.href}>
-                <a>{menu.title}</a>
+                {menu.title}
               </NavMenuLink>
             ))}
           </ul>
@@ -90,7 +86,7 @@ export default function Navbar() {
           >
             {socials.map((social) => (
               <SocialLink key={social.title} href={social.href}>
-                <a>{social.title}</a>
+                {social.title}
               </SocialLink>
             ))}
           </ul>
@@ -99,13 +95,11 @@ export default function Navbar() {
               show ? "flex" : "hidden"
             } lg:w-1/12 w-full flex lg:justify-end lg:p-0 px-5`}
           >
-            <li>
-              <Link href={"/auth/signup"}>
-                <a>
-                  <button className="px-5 py-2 hover:from-primary/80 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
-                    Sign Up
-                  </button>
-                </a>
+            <li className="w-full">
+              <Link href={"/auth/signup"} className="w-full">
+                <button className="px-5 py-2 hover:from-primary/80 w-full my-3 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
+                  Sign Up
+                </button>
               </Link>
             </li>
           </ul>

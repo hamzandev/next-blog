@@ -16,7 +16,7 @@ export default function DetailPostCard({ post, user }) {
           </span>
         ))}
       </div>
-      <h1 className="lg:text-2xl lg:w-[95%] text-xl mb-2 font-semibold text-gray-800">
+      <h1 className="lg:text-2xl font-poppins lg:w-[95%] text-xl mb-2 font-semibold text-gray-800">
         {post.title}
       </h1>
       <p className="slug text-gray-600 leading-relaxed lg:w-[80%]">

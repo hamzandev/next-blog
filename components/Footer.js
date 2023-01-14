@@ -24,6 +24,8 @@ export default function Footer() {
         <h4 className="text-gray-500">
           Made with 💖 by{" "}
           <a
+            target={"_blank"}
+            rel="noreferrer"
             href="https://instagram.com/hamzanwahyu.me"
             className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
           >

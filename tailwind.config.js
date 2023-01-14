@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        mona: "Mona-Sans, Arial, sans-serif",
         poppins: "Poppins, Arial, sans-serif",
       },
       colors: {

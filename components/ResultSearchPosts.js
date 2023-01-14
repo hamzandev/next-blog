@@ -1,18 +1,18 @@
-import Image from "next/image";
-import FeaturedPost from "./FeaturedPost";
-import Link from "next/link";
-import PostCard from "./PostCard";
-import SearchForm from "./SearchForm";
+import { useRouter } from "next/router";
 
-import search from "../public/assets/search.svg";
+import Layout from "./Layout";
+import PostCard from "./PostCard";
+
 import dua from "../public/img/2.jpg";
 import tiga from "../public/img/3.jpg";
 import empat from "../public/img/4.jpg";
 import lima from "../public/img/5.jpg";
-import logo from "../public/assets/full-logo.svg";
+import SearchForm from "./SearchForm";
 
-export default function HomePage() {
-  const post = [
+export default function ResultSearchPosts() {
+  const { query } = useRouter();
+
+  const resultPosts = [
     {
       id: 1,
       title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut?",
@@ -62,24 +62,26 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="home container mx-auto lg:pt-36 pt-32">
-      <h2 className="flex justify-center items-center lg:w-[18%] md:w-[24%] w-[30%] mx-auto">
-        <Image src={logo} alt="Logo" className="w-full" />
-      </h2>
-      <SearchForm />
-      <div className="blog-posts md:px-3 px-5 mx-auto grid my-8 lg:w-full md:w-[65vw]">
-        <FeaturedPost />
-        <div className="other-posts flex flex-wrap lg:flex-row flex-col lg:mt-10 mt-20">
-          {post.map((p) => (
-            <PostCard key={p.id} post={p} />
+    <Layout pageTitle="Result Search">
+      <div className="container mx-auto pt-32 pb-20">
+        <h2 className="text-gray-800 text-3xl mx-auto text-center mb-5">
+          Result for :{" "}
+          <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
+            {query.keyword}
+          </span>
+        </h2>
+        <SearchForm />
+        <div className="wrapper flex flex-wrap md:flex-row flex-col mt-14">
+          {resultPosts.map((post) => (
+            <div
+              key={post.id}
+              className="lg:w-4/12 md:w-6/12 w-full lg:px-0 px-3"
+            >
+              <PostCard post={post} />
+            </div>
           ))}
         </div>
-        <Link href={"/posts"} className="block mx-auto">
-          <span className="text-gray-500 hover:text-primary underline underline-offset-4">
-            See all Article
-          </span>
-        </Link>
       </div>
-    </div>
+    </Layout>
   );
 }

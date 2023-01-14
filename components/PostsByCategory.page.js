@@ -1,18 +1,17 @@
-import Image from "next/image";
-import FeaturedPost from "./FeaturedPost";
-import Link from "next/link";
-import PostCard from "./PostCard";
-import SearchForm from "./SearchForm";
+import { useRouter } from "next/router";
 
-import search from "../public/assets/search.svg";
+import Layout from "./Layout";
+import PostCard from "../components/PostCard";
+
 import dua from "../public/img/2.jpg";
 import tiga from "../public/img/3.jpg";
 import empat from "../public/img/4.jpg";
 import lima from "../public/img/5.jpg";
-import logo from "../public/assets/full-logo.svg";
 
-export default function HomePage() {
-  const post = [
+export default function PostsByCategoryPage() {
+  const { query } = useRouter();
+
+  const posts = [
     {
       id: 1,
       title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut?",
@@ -62,24 +61,22 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="home container mx-auto lg:pt-36 pt-32">
-      <h2 className="flex justify-center items-center lg:w-[18%] md:w-[24%] w-[30%] mx-auto">
-        <Image src={logo} alt="Logo" className="w-full" />
-      </h2>
-      <SearchForm />
-      <div className="blog-posts md:px-3 px-5 mx-auto grid my-8 lg:w-full md:w-[65vw]">
-        <FeaturedPost />
+    <Layout pageTitle="Posts Category">
+      <div className="container mx-auto lg:pt-36 pt-36">
+        <h1 className="text-center mx-auto text-gray-800 text-3xl font-semibold">
+          Posts by Category
+        </h1>
+        <span className="block mx-auto text-center text-primary underline underline-offset-4 my-2">
+          {query.category}
+        </span>
         <div className="other-posts flex flex-wrap lg:flex-row flex-col lg:mt-10 mt-20">
-          {post.map((p) => (
-            <PostCard key={p.id} post={p} />
+          {posts.map((p) => (
+            <div key={p.id} className="lg:w-4/12 w-full lg:px-0 px-5">
+              <PostCard post={p} />
+            </div>
           ))}
         </div>
-        <Link href={"/posts"} className="block mx-auto">
-          <span className="text-gray-500 hover:text-primary underline underline-offset-4">
-            See all Article
-          </span>
-        </Link>
       </div>
-    </div>
+    </Layout>
   );
 }
