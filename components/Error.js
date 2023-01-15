@@ -7,7 +7,7 @@ export default function Error() {
       <h1 className="lg:text-7xl text-5xl text-transparent bg-gradient-to-tr from-indigo-600 to-rose-500 bg-clip-text font-mona font-bold">
         Yaaaahhh...
       </h1>
-      <p className="text-lg text-gray-500 font-mona">
+      <p className="text-lg lg:w-full md:w-[80%] w-[70%] text-gray-500 font-mona">
         Website sedang maintenance. Silahkan coba lagi nanti.
       </p>
       <Link href={""}>
