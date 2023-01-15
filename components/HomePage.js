@@ -1,15 +1,12 @@
-import Image from "next/image";
 import FeaturedPost from "./FeaturedPost";
 import Link from "next/link";
 import PostCard from "./PostCard";
 import SearchForm from "./SearchForm";
 
-import search from "../public/assets/search.svg";
 import dua from "../public/img/2.jpg";
 import tiga from "../public/img/3.jpg";
 import empat from "../public/img/4.jpg";
 import lima from "../public/img/5.jpg";
-import logo from "../public/assets/full-logo.svg";
 
 export default function HomePage({ posts }) {
   const post = [

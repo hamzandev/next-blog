@@ -1,7 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-
-import avatar from "../public/assets/shigaraki.png";
 
 export default function DetailPostCard({ post, postId }) {
   return (
