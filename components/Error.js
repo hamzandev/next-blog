@@ -5,7 +5,7 @@ export default function Error() {
   return (
     <Layout>
       <div className="flex min-h-screen items-center justify-center bg-gradient-to-tr from-primary/20 to-rose-400/20 flex-col">
-        <div className="text-9xl mb-3 text-orange-500 animate-slow-spin">⚙</div>
+        <div className="text-9xl mb-3 text-orange-500 -z-10 animate-slow-spin">⚙</div>
         <h1 className="lg:text-7xl text-5xl text-transparent bg-gradient-to-tr from-indigo-600 to-rose-500 bg-clip-text font-mona font-bold">
           Yaaaahhh...
         </h1>
