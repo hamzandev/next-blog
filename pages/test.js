@@ -56,7 +56,7 @@ export default function TestStrapi({ posts }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(
     `${process.env.API_BASE_URL}/posts?fields=title,publishedAt,description&populate=image,category`
   );
