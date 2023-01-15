@@ -11,7 +11,7 @@ export default function PostCard({ post }) {
         router.asPath === "/" ? "lg:w-4/12" : "lg:w-full"
       }  w-full lg:px-3 mb-20`}
     >
-      <div className="image rounded-md overflow-clip">
+      <div className="image rounded-md lg:h-56 md:h-80 h-48 overflow-clip">
         <Image
           src={
             "http://localhost:1337" +
@@ -20,7 +20,7 @@ export default function PostCard({ post }) {
           alt="dua"
           width={500}
           height={100}
-          className="w-full object-cover"
+          className="w-full object-cover object-center"
         />
       </div>
       <DetailPostCard post={post.attributes} postId={post.id} />

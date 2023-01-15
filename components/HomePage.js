@@ -85,7 +85,7 @@ export default function HomePage({ posts }) {
       <SearchForm />
       <div className="lg:px-0 px-5">
         <FeaturedPost />
-        <div className="flex lg:flex-row mt-20 lg:mt-0 flex-wrap flex-col">
+        <div className="flex lg:w-full md:w-[90%] w-full mx-auto lg:flex-row mt-20 lg:mt-0 flex-wrap flex-col">
           {posts.map((post) => {
             return <PostCard key={post.id} post={post} />;
           })}
