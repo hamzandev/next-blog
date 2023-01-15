@@ -36,7 +36,7 @@ export default function Navbar() {
             </button>
           </div>
           {/* Menu for Non-mobile */}
-          <ul
+          <div
             className={`menus lg:flex hidden lg:flex-row flex-col justify-center lg:gap-8 gap-5 lg:pl-5 lg:w-7/12 w-full lg:p-0 p-5`}
           >
             {menus.map((menu) => (
@@ -44,8 +44,8 @@ export default function Navbar() {
                 {menu.title}
               </NavMenuLink>
             ))}
-          </ul>
-          <ul
+          </div>
+          <div
             className={`socials lg:w-2/12 w-full lg:flex hidden lg:justify-center lg:items-center lg:p-0 px-3`}
           >
             {socials.map((social) => (
@@ -53,22 +53,22 @@ export default function Navbar() {
                 {social.title}
               </SocialLink>
             ))}
-          </ul>
-          <ul
+          </div>
+          <div
             className={` lg:w-1/12 w-full lg:flex hidden lg:justify-end lg:p-0 px-5`}
           >
-            <li>
+            <div>
               <Link href={"/auth/signup"}>
                 <button className="px-5 py-2 hover:from-primary/80 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
                   Sign Up
                 </button>
               </Link>
-            </li>
-          </ul>
+            </div>
+          </div>
           {/* End Non-mobile menu */}
 
           {/* Menu for mobile */}
-          <ul
+          <div
             className={`${
               show ? "flex" : "hidden"
             } menus flex lg:flex-row flex-col justify-center lg:gap-8 gap-5 lg:pl-5 lg:w-7/12 w-full lg:p-0 p-5`}
@@ -78,8 +78,8 @@ export default function Navbar() {
                 {menu.title}
               </NavMenuLink>
             ))}
-          </ul>
-          <ul
+          </div>
+          <div
             className={`${
               show ? "flex" : "hidden"
             } socials lg:w-2/12 w-full flex lg:justify-center lg:items-center lg:p-0 px-3`}
@@ -89,20 +89,20 @@ export default function Navbar() {
                 {social.title}
               </SocialLink>
             ))}
-          </ul>
-          <ul
+          </div>
+          <div
             className={`${
               show ? "flex" : "hidden"
             } lg:w-1/12 w-full flex lg:justify-end lg:p-0 px-5`}
           >
-            <li className="w-full">
+            <div className="w-full">
               <Link href={"/auth/signup"} className="w-full">
                 <button className="px-5 py-2 hover:from-primary/80 w-full my-3 hover:to-secondary/80 duration-150 hover:shadow rounded-full bg-gradient-to-r from-primary to-secondary border border-primary text-gray-100">
                   Sign Up
                 </button>
               </Link>
-            </li>
-          </ul>
+            </div>
+          </div>
           {/* End mobile menu */}
         </div>
       </div>

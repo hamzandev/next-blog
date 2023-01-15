@@ -11,7 +11,7 @@ import empat from "../public/img/4.jpg";
 import lima from "../public/img/5.jpg";
 import logo from "../public/assets/full-logo.svg";
 
-export default function HomePage() {
+export default function HomePage({ posts }) {
   const post = [
     {
       id: 1,
@@ -63,7 +63,8 @@ export default function HomePage() {
 
   return (
     <div className="home container mx-auto lg:pt-36 pt-32">
-      <h2 className="flex justify-center items-center lg:w-[18%] md:w-[24%] w-[30%] mx-auto">
+      {/* <h2 className="flex justify-center items-center lg:w-[18%] md:w-[24%] w-
+      [30%] mx-auto">
         <Image src={logo} alt="Logo" className="w-full" />
       </h2>
       <SearchForm />
@@ -79,7 +80,25 @@ export default function HomePage() {
             See all Article
           </span>
         </Link>
+      </div> */}
+
+      <h2 className="text-transparent text-3xl font-semibold font-mona bg-clip-text bg-gradient-to-r from-indigo-500 text-center to-rose-400">
+        Blog
+      </h2>
+      <SearchForm />
+      <div className="lg:px-0 px-5">
+        <FeaturedPost />
+        <div className="flex lg:flex-row mt-20 lg:mt-0 flex-wrap flex-col">
+          {posts.map((post) => {
+            return <PostCard key={post.id} post={post} />;
+          })}
+        </div>
       </div>
+      <Link href={"/posts"} className="block mx-auto">
+        <span className="text-gray-500 text-center block mx-auto mb-20 hover:text-primary underline underline-offset-4">
+          View all Article
+        </span>
+      </Link>
     </div>
   );
 }

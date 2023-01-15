@@ -12,9 +12,18 @@ export default function PostCard({ post }) {
       }  w-full lg:px-3 mb-20`}
     >
       <div className="image rounded-md overflow-clip">
-        <Image src={post.thumbnail} alt="dua" className="w-full object-cover" />
+        <Image
+          src={
+            "http://localhost:1337" +
+            post.attributes.image.data.attributes.formats.small.url
+          }
+          alt="dua"
+          width={500}
+          height={100}
+          className="w-full object-cover"
+        />
       </div>
-      <DetailPostCard user={post.user} post={post} />
+      <DetailPostCard post={post.attributes} postId={post.id} />
     </div>
   );
 }

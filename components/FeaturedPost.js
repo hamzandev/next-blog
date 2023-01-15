@@ -6,7 +6,7 @@ import satu from "../public/img/4.jpg";
 
 export default function FeaturedPost() {
   return (
-    <div className="card featured-post lg:px-3 flex lg:flex-row flex-col gap-4">
+    <div className="card featured-post lg:px-3 flex lg:mb-8 mb-5 mt-10 lg:flex-row flex-col gap-4">
       <div className="thumbnail lg:w-7/12 w-full">
         <div className="image rounded-md overflow-hidden">
           <Image src={satu} className="object-cover w-full" alt="satu"></Image>

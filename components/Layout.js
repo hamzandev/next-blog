@@ -16,7 +16,7 @@ export default function Layout({ children, pageTitle = "" }) {
           name="keywords"
           content="article artikel blog programming web design ui design frontend backend sandika galih reactjs nextjs"
         />
-        <title>BLOGREAT | {pageTitle}</title>
+        <title>BLOGREAT</title>
       </Head>
       <Navbar />
       <main className="main-content">{children}</main>
