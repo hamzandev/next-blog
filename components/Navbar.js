@@ -120,7 +120,7 @@ export default function Navbar() {
           <div
             className={`${
               show ? "flex" : "hidden"
-            } menus flex lg:flex-row flex-col justify-center lg:gap-8 gap-5 lg:pl-5 lg:w-7/12 w-full lg:p-0 p-5`}
+            } menus flex lg:flex-row flex-col z-10 justify-center lg:gap-8 gap-5 lg:pl-5 lg:w-7/12 w-full lg:p-0 p-5`}
           >
             <NavMenuLink href="/">Home</NavMenuLink>
             <NavMenuLink href="/posts">Articles</NavMenuLink>
